@@ -5,7 +5,7 @@ class BaseModel {
         if (typeof data === 'string') {
             this.message = data
             data = null
-            messge = null
+            message = null
         }
         if (data) {
             this.data = data
@@ -28,4 +28,9 @@ class ErrorModel extends BaseModel {
         super(data, message)
         this.errno = -1
     }
+}
+
+module.exports = {
+    SuccessModel,
+    ErrorModel
 }
